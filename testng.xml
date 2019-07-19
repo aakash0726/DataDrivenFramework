@@ -5,12 +5,12 @@
 		<listener class-name="tests.Listners" />
 		<listener class-name="tests.ExtentReporterNG" />
 	</listeners>
-	<test name="Validate login functionality">
+	<test name="Validate login functionality for  all VHS websites">
 		<classes>
 			<class name="tests.LoginTest" />
 		</classes>
 	</test>
-	<test name="Validate Sign up functionality">
+	<test name="Validate Sign up functionality for all VHS websites  ">
 		<classes>
 			<class name="tests.SignUpTest" />
 		</classes>

@@ -2,42 +2,46 @@
 <testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="237087" started-at="2019-06-10T10:14:08Z" finished-at="2019-06-10T10:18:05Z">
+  <suite name="Suite" duration-ms="326114" started-at="2019-07-19T11:44:08Z" finished-at="2019-07-19T11:49:34Z">
     <groups>
     </groups>
-    <test name="Validate login functionality" duration-ms="135402" started-at="2019-06-10T10:14:08Z" finished-at="2019-06-10T10:16:23Z">
+    <test name="Validate login functionality for  all VHS websites" duration-ms="171613" started-at="2019-07-19T11:44:08Z" finished-at="2019-07-19T11:46:59Z">
       <class name="tests.LoginTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:tests.LoginTest@77fbd92c]" name="openBrowser" is-config="true" duration-ms="6097" started-at="2019-06-10T10:14:08Z" finished-at="2019-06-10T10:14:14Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:tests.LoginTest@1bd4fdd]" name="openBrowser" is-config="true" duration-ms="12484" started-at="2019-07-19T11:44:08Z" finished-at="2019-07-19T11:44:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyInvalidLoginValidationMessage()[pri:0, instance:tests.LoginTest@77fbd92c]" name="verifyInvalidLoginValidationMessage" duration-ms="128458" started-at="2019-06-10T10:14:14Z" finished-at="2019-06-10T10:16:22Z">
+        <test-method status="PASS" signature="verifyInvalidLoginValidationMessage()[pri:0, instance:tests.LoginTest@1bd4fdd]" name="verifyInvalidLoginValidationMessage" duration-ms="158330" started-at="2019-07-19T11:44:20Z" finished-at="2019-07-19T11:46:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLoginValidationMessage -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.LoginTest@77fbd92c]" name="closeBrowser" is-config="true" duration-ms="800" started-at="2019-06-10T10:16:22Z" finished-at="2019-06-10T10:16:23Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.LoginTest@1bd4fdd]" name="closeBrowser" is-config="true" duration-ms="747" started-at="2019-07-19T11:46:59Z" finished-at="2019-07-19T11:46:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tests.LoginTest -->
-    </test> <!-- Validate login functionality -->
-    <test name="Validate Sign up functionality" duration-ms="101628" started-at="2019-06-10T10:16:23Z" finished-at="2019-06-10T10:18:05Z">
+    </test> <!-- Validate login functionality for  all VHS websites -->
+    <test name="Validate Sign up functionality for all VHS websites  " duration-ms="154384" started-at="2019-07-19T11:47:00Z" finished-at="2019-07-19T11:49:34Z">
       <class name="tests.SignUpTest">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:tests.SignUpTest@5c6648b0]" name="openBrowser" is-config="true" duration-ms="4713" started-at="2019-06-10T10:16:23Z" finished-at="2019-06-10T10:16:28Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:tests.SignUpTest@4c583ecf]" name="openBrowser" is-config="true" duration-ms="7415" started-at="2019-07-19T11:47:00Z" finished-at="2019-07-19T11:47:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="verifyNotSamePasswordValidationMessage()[pri:1, instance:tests.SignUpTest@5c6648b0]" name="verifyNotSamePasswordValidationMessage" duration-ms="20718" started-at="2019-06-10T10:16:28Z" finished-at="2019-06-10T10:16:49Z">
+        <test-method status="PASS" signature="verifyInvalidPasswordValidationMessage()[pri:1, instance:tests.SignUpTest@4c583ecf]" name="verifyInvalidPasswordValidationMessage" duration-ms="127173" started-at="2019-07-19T11:47:07Z" finished-at="2019-07-19T11:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidPasswordValidationMessage -->
+        <test-method status="FAIL" signature="verifyNotSamePasswordValidationMessage()[pri:2, instance:tests.SignUpTest@4c583ecf]" name="verifyNotSamePasswordValidationMessage" duration-ms="16963" started-at="2019-07-19T11:49:14Z" finished-at="2019-07-19T11:49:31Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Validation message is not showing for not same password on Repeat Password field  as per specification expected [true] but found [false]]]>
+              <![CDATA[Validation message is not showing same as per provided specification expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Validation message is not showing for not same password on Repeat Password field  as per specification expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Validation message is not showing same as per provided specification expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertTrue(Assert.java:44)
-at tests.SignUpTest.verifyNotSamePasswordValidationMessage(SignUpTest.java:44)
+at tests.SignUpTest.verifyNotSamePasswordValidationMessage(SignUpTest.java:43)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -69,15 +73,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNotSamePasswordValidationMessage -->
-        <test-method status="PASS" signature="verifyInvalidPasswordFormatMessage()[pri:2, instance:tests.SignUpTest@5c6648b0]" name="verifyInvalidPasswordFormatMessage" duration-ms="73367" started-at="2019-06-10T10:16:49Z" finished-at="2019-06-10T10:18:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidPasswordFormatMessage -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.SignUpTest@5c6648b0]" name="closeBrowser" is-config="true" duration-ms="2351" started-at="2019-06-10T10:18:02Z" finished-at="2019-06-10T10:18:05Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.SignUpTest@4c583ecf]" name="closeBrowser" is-config="true" duration-ms="2320" started-at="2019-07-19T11:49:32Z" finished-at="2019-07-19T11:49:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tests.SignUpTest -->
-    </test> <!-- Validate Sign up functionality -->
+    </test> <!-- Validate Sign up functionality for all VHS websites   -->
   </suite> <!-- Suite -->
 </testng-results>

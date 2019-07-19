@@ -19,32 +19,30 @@ public class SignUpTest extends Base {
 		launchBrowser(readPropertiesFile("Browser"));
 	}
 
-	@Test(priority = 2)
-	public void verifyInvalidPasswordFormatMessage() {
+	@Test(priority = 1)
+	public void verifyInvalidPasswordValidationMessage() {
 		ReadExcelFile readFile = new ReadExcelFile();
 		for (int j = 1; j < readFile.totalNumberOfRow(); j++) {
 			driver.get(readFile.readExcel(j, readPropertiesFile("ColumnName")));
 			Utility u = new Utility();
 			u.signUpToVHSWithWrongPasswordFormat();
-			assertTrue(u.validationMessageForWrongFormatPassword(),
-					"Validation message is not showing for invalid password format on Password field as per specification");
-			log.info("verify Invalid Password Format Message test completed for: "
-					+ readFile.readExcel(j, readPropertiesFile("ColumnName2")) + " VHS Website");
+			assertTrue(u.validationMessageForWrongFormatPassword(), readPropertiesFile("AsertFailMessage"));
+			log.info(readFile.readExcel(j, readPropertiesFile("ColumnName2"))
+					+ " VHS Website successfully completed verification");
 
 		}
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void verifyNotSamePasswordValidationMessage() {
 		ReadExcelFile readFile = new ReadExcelFile();
 		for (int j = 1; j < readFile.totalNumberOfRow(); j++) {
 			driver.get(readFile.readExcel(j, readPropertiesFile("ColumnName")));
 			Utility u = new Utility();
 			u.signUpToVHSWithNotSamePasswordFormat();
-			assertTrue(u.validationMessageForNotSamePassword(),
-					"Validation message is not showing for not same password on Repeat Password field  as per specification");
-			log.info("verify not same password validation message test completed for: "
-					+ readFile.readExcel(j, readPropertiesFile("ColumnName2")) + " VHS Website");
+			assertTrue(u.validationMessageForNotSamePassword(),readPropertiesFile("AsertFailMessage"));
+			log.info(readFile.readExcel(j, readPropertiesFile("ColumnName2"))
+					+ " VHS Website successfully completed verification");
 		}
 	}
 

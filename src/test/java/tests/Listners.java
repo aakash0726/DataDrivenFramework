@@ -12,20 +12,21 @@ public class Listners extends Base implements ITestListener {
 	private static Logger log = LogManager.getLogger(Listners.class.getName());
 
 	public void onTestStart(ITestResult result) {
-		log.info(result.getName()+ " : VERIFICATION STARTING");
+		log.info("Test case -> "+result.getName()+ " : verifcation start");
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		log.info(result.getName()+ " : PASSED");
+		log.info("Test case -> "+ result.getName()+ " : PASSED");
 	}
 
 	public void onTestFailure(ITestResult result) {
+		waitFor10Seconds();
 		takeScreenshot(result.getName());
-		log.info(result.getName()+ " : FAILED");
+		log.info("Test case -> " +result.getName()+ " : FAILED, please check taken failed screenshot");
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		log.info(result.getName()+ " : SKIPPED");
+		log.info("Test case -> "+ result.getName()+ " : SKIPPED");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -33,11 +34,11 @@ public class Listners extends Base implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		log.info(context.getName()+ " : Start ");
+		log.info("Test Suite -> "+context.getName()+ " : Start ");
 	}
 
 	public void onFinish(ITestContext context) {
-		log.info(context.getName()+ " : Finish ");
+		log.info("Test Suite -> "+context.getName()+ " : Finish ");
 	}
 
 	

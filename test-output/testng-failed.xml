@@ -5,7 +5,7 @@
     <listener class-name="tests.Listners"/>
     <listener class-name="tests.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Validate Sign up functionality(failed)">
+  <test thread-count="5" name="Validate Sign up functionality for all VHS websites  (failed)">
     <classes>
       <class name="tests.SignUpTest">
         <methods>
@@ -15,5 +15,5 @@
         </methods>
       </class> <!-- tests.SignUpTest -->
     </classes>
-  </test> <!-- Validate Sign up functionality(failed) -->
+  </test> <!-- Validate Sign up functionality for all VHS websites  (failed) -->
 </suite> <!-- Failed suite [Suite] -->

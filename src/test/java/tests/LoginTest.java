@@ -28,10 +28,9 @@ public class LoginTest extends Base {
 			Utility u = new Utility();
 			u.loginToVHSWithInvalidCredential();
 			waitFor10Seconds();
-			assertTrue(u.validationMessageForInvalidLoginCredential(),
-					"Validation message is not showing for invalid login credential as per specification");
-			log.info("verify Invalid Login Credentail Validation Message test completed for: "
-					+ readFile.readExcel(j, readPropertiesFile("ColumnName2")) + " VHS Website");
+			assertTrue(u.validationMessageForInvalidLoginCredential(), readPropertiesFile("AsertFailMessage"));
+			log.info(readFile.readExcel(j, readPropertiesFile("ColumnName2"))
+					+ " VHS Website successfully completed verification");
 		}
 	}
 
